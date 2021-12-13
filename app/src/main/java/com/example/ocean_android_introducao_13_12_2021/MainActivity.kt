@@ -24,8 +24,15 @@ class MainActivity : AppCompatActivity() {
         btEnviar.setOnClickListener{
             val nome = etNome.text
 
-            // Alteramos o texto do tvResultado para uma string que quisermos
-            tvResultado.text = nome
+            // Caso o nome estha em branco, entrar  no if
+            if (nome.isBlank()){
+                //Exibe uma mensagem de erro nome  válido
+                etNome.error = "Digite um nome válido "
+            }else {
+
+                // Alteramos o texto do tvResultado para uma string que quisermos
+                tvResultado.text = nome
+            }
         }
 
     }
