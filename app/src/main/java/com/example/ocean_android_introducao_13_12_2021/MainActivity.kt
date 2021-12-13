@@ -1,5 +1,6 @@
 package com.example.ocean_android_introducao_13_12_2021
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val tvResultado = findViewById<TextView>(R.id.tvResultado)
         val btEnviar = findViewById<Button>(R.id.btEnviar)
         val etNome = findViewById<EditText>(R.id.etNome)
+        val btAbrirTela = findViewById<Button>(R.id.btAbrirTela)
 
 
 
@@ -35,5 +37,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Detectar clqiue no botão btnAbrirTela
+        btAbrirTela.setOnClickListener {
+            val abrirTelaIntent = Intent(this, ResultadpActivity::class.java)
+
+            // Adiciona uma informação à Intent que abre uma nova tela
+            val nome= etNome.text
+            abrirTelaIntent.putExtra("NOME_DIGITADO", nome)
+
+            startActivity(abrirTelaIntent)
+        }
     }
 }
