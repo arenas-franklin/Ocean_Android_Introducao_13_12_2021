@@ -5,4 +5,6 @@
     <string name="type_your_name">"Digite o seu nome "</string>
     <string name="open_new_screen">Abrir nova tela</string>
     <string name="back">Voltar</string>
+    <string name="type_valid_name">digite um nome valido</string>
+    <string name="update_sucessfully">Texto atualizado com sucesso</string>
 </resources>

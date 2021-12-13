@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +30,13 @@ class MainActivity : AppCompatActivity() {
             // Caso o nome estha em branco, entrar  no if
             if (nome.isBlank()){
                 //Exibe uma mensagem de erro nome  válido
-                etNome.error = "Digite um nome válido "
+                etNome.error = getString(R.string.type_valid_name)
             }else {
 
                 // Alteramos o texto do tvResultado para uma string que quisermos
                 tvResultado.text = nome
+
+                Toast.makeText(this, getString(R.string.update_sucessfully), Toast.LENGTH_LONG).show()
             }
         }
 
