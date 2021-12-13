@@ -22,9 +22,7 @@ class ResultadpActivity : AppCompatActivity() {
 
 
         btVoltar.setOnClickListener {
-            val voltarTelaIntent = Intent(this,MainActivity::class.java)
-
-            startActivity(voltarTelaIntent)
+            finish()
         }
     }
 }
